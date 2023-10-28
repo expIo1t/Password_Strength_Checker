@@ -16,7 +16,7 @@ fn check_password_strength(password: &str) -> bool {
     let has_number = re_number.is_match(password); // check for numbers
     let has_special_char = re_special_char.is_match(password); // check for special characters
 
-    // Return true if all criteria are met
+    // Return true if all criteria are met:
     is_minimum_length && has_lowercase && has_uppercase && has_number && has_special_char
 }
 
