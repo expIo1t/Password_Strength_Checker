@@ -10,7 +10,7 @@ fn check_password_strength(password: &str) -> bool {
     let re_special_char = Regex::new(r#"[!@#$%^&*(),.?":{}|<>]"#).unwrap(); // special characters
 
     // Check if the password satisfies the defined criteria:
-    let is_minimum_length = password.len() >= 8; // minimum length of 8 characters
+    let is_minimum_length = password.len() >= 25; // minimum length of 25 characters
     let has_lowercase = re_lowercase.is_match(password); // check for lowercase letters
     let has_uppercase = re_uppercase.is_match(password); // check for uppercase letters
     let has_number = re_number.is_match(password); // check for numbers
